@@ -1,5 +1,6 @@
 <?php
-require_once("./php/component.php")
+require_once("./php/component.php");
+require_once("./php/operation.php");
 
 ?>
 
