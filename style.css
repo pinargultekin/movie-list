@@ -137,9 +137,29 @@ background-color: lightgreen;
 padding:.5rem;
 }
 .error{
-  background-color: orangered;
+  background-color: rgba(170, 128, 113, 0.473);
   padding:.5rem;
 }
 .btnedit:hover, .btndelete:hover{
   cursor: pointer;
+}
+tr>th:first-child{
+display:none;
+}
+tr>td:first-child{
+  display:none;
+}
+#id-sec{
+  display: none;
+}
+#name-sec{
+  margin-top:2rem;
+}
+/* tr>th:nth-child(2){
+  padding-left:1rem;
+  text-align: left;
+} */
+tr>td:nth-child(2){
+  padding-left:1rem;
+  text-align: left;
 }

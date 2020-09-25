@@ -4,8 +4,6 @@ id.attr("readonly", "readonly");
 
 $(".btnedit").click(e => {
     let textvalues = displayData(e);
-
-    ;
     let moviename = $("input[name*='movie_name']");
     let movieyear = $("input[name*='movie_year']");
     let movierate = $("input[name*='movie_rate']");

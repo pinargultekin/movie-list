@@ -10,6 +10,7 @@ require_once("./php/operation.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-control" content="no-cache">
     <title>Movies</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -30,26 +31,26 @@ require_once("./php/operation.php");
     <div class="main-cont">
         <form action="" method="post" class="input-table">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12" id="id-sec">
                     <?php inputElement("<i class='fas fa-id-badge'></i>", "ID", "movie_id", "") ?>
                 </div>
-                <div class="col-12">
+                <div class="col-12" id="name-sec">
                     <?php inputElement("<i class='fas fa-film'></i>", "Movie Name", "movie_name", ""); ?>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <?php inputElement("<i class='far fa-calendar-alt'></i>", "Year", "movie_year", ""); ?>
                 </div>
-                <div class="row">
-                    <div class="col-6">
-                        <?php inputElement("<i class='far fa-calendar-alt'></i>", "Year", "movie_year", ""); ?>
-                    </div>
-                    <div class="col-6">
-                        <?php inputElement("<i class='fas fa-star-half-alt'></i>", "Rate", "movie_rate", ""); ?>
-                    </div>
+                <div class="col-6">
+                    <?php inputElement("<i class='fas fa-star-half-alt'></i>", "Rate", "movie_rate", ""); ?>
                 </div>
+            </div>
             <div class="row button-group justify-content-center">
-            <?php buttonElement("btn-create","btn","<i class='fas fa-plus'></i>","create","data-toggle='tooltip' data-placement='bottom' title='Create'"); ?>
-                        <?php buttonElement("btn-read","btn","<i class='fas fa-sync'></i>","read","data-toggle='tooltip' data-placement='bottom' title='Read'"); ?>
-                        <?php buttonElement("btn-update","btn","<i class='fas fa-pen-alt'></i>","update","data-toggle='tooltip' data-placement='bottom' title='Update'"); ?>
-                        <?php buttonElement("btn-delete","btn","<i class='fas fa-trash-alt'></i>","delete","data-toggle='tooltip' data-placement='bottom' title='Delete'"); ?>          
+                <?php buttonElement("btn-create", "btn", "<i class='fas fa-plus'></i>", "create", "data-toggle='tooltip' data-placement='bottom' title='Create'"); ?>
+                <?php buttonElement("btn-read", "btn", "<i class='fas fa-sync'></i>", "read", "data-toggle='tooltip' data-placement='bottom' title='Read'"); ?>
+                <?php buttonElement("btn-update", "btn", "<i class='fas fa-pen-alt'></i>", "update", "data-toggle='tooltip' data-placement='bottom' title='Update'"); ?>
+                <?php buttonElement("btn-delete", "btn", "<i class='fas fa-trash-alt'></i>", "delete", "data-toggle='tooltip' data-placement='bottom' title='Delete'"); ?>
             </div>
         </form>
 
@@ -62,32 +63,31 @@ require_once("./php/operation.php");
                         <th>Year</th>
                         <th>Rate</th>
                         <th>Edit</th>
-                        <th>Delete</th>
+                        <!-- <th>Delete</th> -->
                     </tr>
                 </thead>
                 <tbody id="tbody" class="text-center">
-                   <?php
-                   if(isset($_POST['read'])){
-                       $result = getData();
+                    <?php
+                    if (isset($_POST['read'])) {
+                        $result = getData();
 
-                       if($result){
+                        if ($result) {
 
-                           while ($row = mysqli_fetch_assoc($result)){ ?>
+                            while ($row = mysqli_fetch_assoc($result)) { ?>
 
-                               <tr>
-                                   <td data-id="<?php echo $row['id']; ?>"><?php echo $row['id']; ?></td>
-                                   <td data-id="<?php echo $row['id']; ?>"><?php echo $row['movie_name']; ?></td>
-                                   <td data-id="<?php echo $row['id']; ?>"><?php echo $row['movie_year']; ?></td>
-                                   <td data-id="<?php echo $row['id']; ?>"><?php echo $row['movie_rate'] . " / 10"; ?></td>
-                                   <td ><i class="fas fa-edit btnedit" data-id="<?php echo $row['id']; ?>"></i></td>  
-                                   <td><i class="fas fa-trash-alt btndelete" data-id="<?php echo $row['id']; ?>"></i></td>
-                               </tr>
-                   <?php
-                           }
-
-                       }
-                   }
-                   ?>
+                                <tr>
+                                    <td data-id="<?php echo $row['id']; ?>"><?php echo $row['id']; ?></td>
+                                    <td data-id="<?php echo $row['id']; ?>"><?php echo $row['movie_name']; ?></td>
+                                    <td data-id="<?php echo $row['id']; ?>"><?php echo $row['movie_year']; ?></td>
+                                    <td data-id="<?php echo $row['id']; ?>"><?php echo $row['movie_rate'] . " / 10"; ?></td>
+                                    <td><i class="fas fa-edit btnedit" data-id="<?php echo $row['id']; ?>"></i></td>
+                                    <!-- <td><i class="fas fa-trash-alt btndelete" data-id="<?php echo $row['id']; ?>"></i></td> -->
+                                </tr>
+                    <?php
+                            }
+                        }
+                    }
+                    ?>
                 </tbody>
             </table>
         </div>
