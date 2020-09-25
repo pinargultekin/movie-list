@@ -137,7 +137,7 @@ background-color: lightgreen;
 padding:.5rem;
 }
 .error{
-  background-color: rgba(170, 128, 113, 0.473);
+  background-color: orangered;
   padding:.5rem;
 }
 .btnedit:hover, .btndelete:hover{
