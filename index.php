@@ -62,28 +62,11 @@ require_once("./php/operation.php");
                         <th>Year</th>
                         <th>Rate</th>
                         <th>Edit</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
-                <tbody id="tbody">
-
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td><i class="fas fa-edit btnedit"></i></td>
-                </tr>
-
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td><i class="fas fa-edit btnedit"></i></td>
-                </tr>
-                   <!-- <?php
-
-
+                <tbody id="tbody" class="text-center">
+                   <?php
                    if(isset($_POST['read'])){
                        $result = getData();
 
@@ -93,20 +76,18 @@ require_once("./php/operation.php");
 
                                <tr>
                                    <td data-id="<?php echo $row['id']; ?>"><?php echo $row['id']; ?></td>
-                                   <td data-id="<?php echo $row['id']; ?>"><?php echo $row['book_name']; ?></td>
-                                   <td data-id="<?php echo $row['id']; ?>"><?php echo $row['book_publisher']; ?></td>
-                                   <td data-id="<?php echo $row['id']; ?>"><?php echo '$' . $row['book_price']; ?></td>
-                                   <td ><i class="fas fa-edit btnedit" data-id="<?php echo $row['id']; ?>"></i></td>
+                                   <td data-id="<?php echo $row['id']; ?>"><?php echo $row['movie_name']; ?></td>
+                                   <td data-id="<?php echo $row['id']; ?>"><?php echo $row['movie_year']; ?></td>
+                                   <td data-id="<?php echo $row['id']; ?>"><?php echo $row['movie_rate'] . " / 10"; ?></td>
+                                   <td ><i class="fas fa-edit btnedit" data-id="<?php echo $row['id']; ?>"></i></td>  
+                                   <td><i class="fas fa-trash-alt btndelete" data-id="<?php echo $row['id']; ?>"></i></td>
                                </tr>
-
                    <?php
                            }
 
                        }
                    }
-
-
-                   ?> -->
+                   ?>
                 </tbody>
             </table>
         </div>
@@ -117,6 +98,8 @@ require_once("./php/operation.php");
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <script src="./php/main.js"></script>
 </body>
 
 </html>

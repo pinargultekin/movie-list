@@ -65,31 +65,29 @@ function getData()
     }
 }
 
-function updateData()
-{
+function updateData(){
     $movieid = textboxValue("movie_id");
     $moviename = textboxValue("movie_name");
     $movieyear = textboxValue("movie_year");
     $movierate = textboxValue("movie_rate");
 
-if($moviename && $movieyear && $movierate){
-    $sql = "
-    UPDATE movies 
-    SET 
-    movie_name = '$moviename',
-    movie_year = '$movieyear',
-    movie_rate = '$movierate'
-    WHERE id='$movieid';
-    ";
-if(mysqli_query($GLOBALS['con'], $sql)){
-    TextNode("success", "Data successfully updated.");
-}else{
-    TextNode("error", "Data cannot updated");
+    if($moviename && $movieyear && $movierate){
+        $sql = "
+                    UPDATE movies SET movie_name='$moviename', movie_year = '$movieyear', movie_rate = '$movierate' WHERE id='$movieid';                    
+        ";
+
+        if(mysqli_query($GLOBALS['con'], $sql)){
+            TextNode("success", "Data Successfully Updated");
+        }else{
+            TextNode("error", "Enable to Update Data");
+        }
+
+    }else{
+        TextNode("error", "Select Data Using Edit Icon");
+    }
+
+
 }
-}else{
-    TextNode("error", "Select data using edit icon.");
-}
-};
 
 
 function deleteData()

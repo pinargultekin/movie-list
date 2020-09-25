@@ -5,7 +5,7 @@ function inputElement($icon, $placeholder, $name, $value){
         <div class=\"input-group-prepend\">
             <div class=\"input-group-text icon\">$icon</div>
         </div>
-            <input type=\"text\" name='$name' value='$value' autocomplete=\"off\" placeholder='$placeholder' class=\"form-control\" id=\"inline-form-input\" placeholder=\"Username\">
+            <input type=\"text\" name='$name' value='$value' autocomplete=\"off\" placeholder='$placeholder' class=\"form-control\" id=\"inlineFormInputGroup\" placeholder=\"Username\">
     </div>
     ";
     echo $element;
