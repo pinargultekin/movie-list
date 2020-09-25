@@ -5,6 +5,6 @@ The application is created by using PHP, CSS and SQL. Applied CRUD operation. Us
 ## Application display
 <hr>
 
-<img src"./images/movielist2.PNG" alt="Movie List App Display">
+<img src="./images/movielist2.PNG" alt="Movie List App Display">
 <br>
-<img src"./images/movielist2.PNG" alt="Movie List App Display">
+<img src="./images/movielist2.PNG" alt="Movie List App Display">
