@@ -79,7 +79,7 @@ require_once("./php/operation.php");
                                     <td data-id="<?php echo $row['id']; ?>"><?php echo $row['id']; ?></td>
                                     <td data-id="<?php echo $row['id']; ?>"><?php echo $row['movie_name']; ?></td>
                                     <td data-id="<?php echo $row['id']; ?>"><?php echo $row['movie_year']; ?></td>
-                                    <td data-id="<?php echo $row['id']; ?>"><?php echo $row['movie_rate'] . " / 10"; ?></td>
+                                    <td data-id="<?php echo $row['id']; ?>"><?php echo $row['movie_rate'] . "/10"; ?></td>
                                     <td><i class="fas fa-edit btnedit" data-id="<?php echo $row['id']; ?>"></i></td>
                                     <!-- <td><i class="fas fa-trash-alt btndelete" data-id="<?php echo $row['id']; ?>"></i></td> -->
                                 </tr>

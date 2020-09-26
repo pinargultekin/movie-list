@@ -15,7 +15,7 @@ $(".btnedit").click(e => {
     id.val(textvalues[0]);
     moviename.val(textvalues[1]);
     movieyear.val(textvalues[2]);
-    movierate.val(textvalues[3].replace("/ 10", ""));
+    movierate.val(textvalues[3].replace("/10", ""));
 });
 
 
