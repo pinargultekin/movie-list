@@ -49,7 +49,7 @@ function textboxValue($value)
 //message banner
 function TextNode($classname, $msg)
 {
-    $element = "<h6 class='$classname'>$msg</h6>";
+    $element = "<h6 class='$classname'>$msg<span class='close'>X</span></h6>";
     echo $element;
 }
 

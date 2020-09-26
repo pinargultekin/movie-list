@@ -62,7 +62,9 @@ body {
 .col-12:first-child{
   margin-top:20px;
 }
-
+.button-group{
+  height: 3.5rem;
+}
 .button-group > .btn {
   color:#ffffff;
   margin-right: 20px;
@@ -133,7 +135,7 @@ tr{
   text-align: left;
 } */
 .success{
-background-color: lightgreen;
+background-color: rgb(77, 163, 77);
 padding:.5rem;
 }
 .error{
@@ -162,4 +164,15 @@ tr>td:first-child{
 tr>td:nth-child(2){
   padding-left:1rem;
   text-align: left;
+}
+.close{
+  text-align: right;
+  font-weight: bolder;
+  cursor:pointer;
+  font-size:1rem;
+  text-shadow:none;
+}
+
+#btn-update, #btn-delete{
+  display:none;
 }

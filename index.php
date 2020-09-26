@@ -43,7 +43,7 @@ require_once("./php/operation.php");
                     <?php inputElement("<i class='far fa-calendar-alt'></i>", "Year", "movie_year", ""); ?>
                 </div>
                 <div class="col-6">
-                    <?php inputElement("<i class='fas fa-star-half-alt'></i>", "Rate", "movie_rate", ""); ?>
+                    <?php inputElement("<i class='fas fa-star-half-alt'></i>", "Rate 1-10", "movie_rate", ""); ?>
                 </div>
             </div>
             <div class="row button-group justify-content-center">

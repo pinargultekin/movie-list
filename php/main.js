@@ -3,6 +3,10 @@ id.attr("readonly", "readonly");
 
 
 $(".btnedit").click(e => {
+    $('#btn-create').hide();
+    $('#btn-read').hide();
+    $('#btn-update').show();
+    $('#btn-delete').show();
     let textvalues = displayData(e);
     let moviename = $("input[name*='movie_name']");
     let movieyear = $("input[name*='movie_year']");
@@ -27,4 +31,10 @@ function displayData(e) {
     }
     return textvalues;
 
-}
+};
+
+$('.close').click(function () {
+    $('.success').hide();
+    $('.error').hide();
+});
+
